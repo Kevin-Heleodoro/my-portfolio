@@ -1,12 +1,16 @@
+import React from 'react';
 
-import React from 'react'
-
-const NavButton = ({ x, y, label, link, icon, newTab }) => {
+const NavButton = ({ x, y, label }) => {
     return (
-        <div className='absolute cursor-pointer z-50' style={{
-            transform: `translate(${x}, ${y})`
-        }}>{label}</div>
-    )
-}
+        <button
+            className='absolute top-1/2 left-1/2'
+            style={{
+                transform: `translate(calc(${x} - 50%), calc(${y} - 50%))`
+            }}
+        >
+            {label}
+        </button>
+    );
+};
 
-export default NavButton
+export default NavButton;

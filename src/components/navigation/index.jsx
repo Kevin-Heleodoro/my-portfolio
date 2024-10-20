@@ -1,8 +1,8 @@
 "use client"
-import React from 'react'
+import React from 'react';
 
-import { BtnList } from '@/app/data'
-import NavButton from './NavButton'
+import { BtnList } from '@/app/data';
+import NavButton from '@/components/navigation/NavButton';
 
 const Navigation = () => {
     const angleIncrement = 360 / BtnList.length;
@@ -17,22 +17,12 @@ const Navigation = () => {
                     const y = `calc(${radius} * ${Math.sin(angleRad).toFixed(6)})`;
 
                     return (
-                        <NavButton key={index} x={x} y={y} {...btn} />
-                        // <button
-                        //     key={index}
-                        //     className='absolute top-1/2 left-1/2'
-                        //     style={{
-                        //         transform: `translate(calc(${x} - 50%), calc(${y} - 50%))`
-                        //     }}
-                        // >
-                        //     {btn.label}
-                        // </button>
-                    )
+                        <NavButton key={btn.label} x={x} y={y} {...btn} />
+                    );
                 })}
             </div>
         </div>
-    )
-}
+    );
+};
 
-
-export default Navigation
+export default Navigation;

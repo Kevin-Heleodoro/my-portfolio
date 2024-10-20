@@ -97,3 +97,7 @@ bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+## Progress
+
+I stopped during the tutorial at around the 49 minute mark. I kept getting render errors when it came to displaying the new `NavButton` component.
